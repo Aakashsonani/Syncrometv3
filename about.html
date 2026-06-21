@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us — Syncromet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=2">
+<link rel="stylesheet" href="assets/modern.css?v=2">
+<style>
+.story { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,4vw,60px); align-items:center; }
+.story .ph { aspect-ratio: 4/3.4; min-height: 320px; }
+@media(max-width:820px){ .story{ grid-template-columns:1fr; } }
+.mv-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media(max-width:760px){ .mv-grid{ grid-template-columns:1fr; } }
+.mv { padding: 34px; position:relative; }
+.mv .icon-badge { margin-bottom: 18px; }
+.numbers { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+@media(max-width:760px){ .numbers{ grid-template-columns:repeat(2,1fr); } }
+.num-box { padding: 30px; text-align:center; }
+.num-box .big { font-family:var(--font-head); font-weight:900; font-size: clamp(2.2rem,4vw,3rem); color: var(--ink); line-height:1; }
+.num-box .big .u { color: var(--copper); }
+.num-box .lbl { color: var(--text-muted); font-size:14px; margin-top:8px; }
+.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+@media(max-width:900px){ .team-grid{ grid-template-columns:repeat(2,1fr); } }
+.team-card .ph { aspect-ratio: 1/1; border-radius:0; border:none; }
+.team-card .body { padding: 20px; }
+.team-card h4 { font-size:1.1rem; }
+</style>
+</head>
+<body>
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Syncromet home">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="#d27e4b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4" stroke="#9fb0bd"/></svg></span>
+        <span><span class="brand__name">SYNCRO<b>MET</b></span><span class="brand__sub">Metal Trading &middot; Canada</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html" data-key="home">Home</a></li>
+        <li><a href="about.html" data-key="about" class="active">About</a></li>
+        <li><a href="services.html" data-key="services">Services</a></li>
+        <li class="has-sub"><a href="#" data-key="metals">Metals <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle"><path d="M6 9l6 6 6-6"/></svg></a>
+          <ul class="subnav">
+            <li><a href="ferrous.html" data-key="ferrous">Ferrous Metals</a></li>
+            <li><a href="non-ferrous.html" data-key="nonferrous">Non-Ferrous Metals</a></li>
+          </ul>
+        </li>
+        <li><a href="safety.html" data-key="safety">Safety &amp; Environment</a></li>
+        <li><a href="blog.html" data-key="blog">Blog</a></li>
+        <li><a href="faq.html" data-key="faq">FAQ</a></li>
+        <li><a href="contact.html" data-key="contact">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="contact.html">Get a Quote</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </nav>
+  </div>
+</header>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer__scrim" data-close></div>
+  <div class="mobile-drawer__panel">
+    <div class="mobile-drawer__head">
+      <a class="brand" href="index.html"><span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="#d27e4b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4" stroke="#9fb0bd"/></svg></span><span class="brand__name">SYNCRO<b>MET</b></span></a>
+      <button class="mobile-drawer__close" id="drawerClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <a class="mlink" data-key="home" href="index.html">Home</a>
+    <a class="mlink active" data-key="about" href="about.html">About</a>
+    <a class="mlink" data-key="services" href="services.html">Services</a>
+    <a class="mlink" data-key="ferrous" href="ferrous.html">Ferrous Metals</a>
+    <a class="mlink" data-key="nonferrous" href="non-ferrous.html">Non-Ferrous Metals</a>
+    <a class="mlink" data-key="safety" href="safety.html">Safety &amp; Env</a>
+    <a class="mlink" data-key="blog" href="blog.html">Blog</a>
+    <a class="mlink" data-key="faq" href="faq.html">FAQ</a>
+    <a class="mlink" data-key="contact" href="contact.html">Contact</a>
+    <a class="btn" href="contact.html">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn btn--ghost" href="tel:+14377996109" style="margin-top:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> 437-799-6109 / 226-724-3896</a>
+  </div>
+</div>
+<main>
+  <section class="page-hero" data-screen-label="About — Hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span>About Us</span></div>
+      <span class="eyebrow">About Syncromet</span>
+      <h1 class="h-xl text-wrap-pretty" style="max-width:18ch">A metal trader you can actually trust</h1>
+      <p class="lead" style="margin-top:18px;max-width:58ch">Family-run, certified, and Canada-wide — we&rsquo;ve spent over two decades building a reputation on honest grading and fair pay.</p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section">
+    <div class="wrap story">
+      <img class="ph reveal" data-label="Facility · main yard & scales" src="assets/images/facility_yard.png" alt="Facility · main yard & scales" style="object-fit: cover;">
+      <div class="reveal" data-d="1">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="h-lg text-wrap-pretty">From a single weigh-scale to a Canada-wide trading desk</h2>
+        <p class="muted" style="margin-top:18px">Syncromet was founded in 1998 with one weigh-scale, one truck, and a simple promise: grade every load honestly and pay a fair, market-indexed price. That promise hasn&rsquo;t changed.</p>
+        <p class="muted" style="margin-top:14px">Today we trade ferrous and non-ferrous metals for manufacturers, contractors, demolition crews and municipalities across the country — moving tens of thousands of tonnes a year while keeping the same hands-on, relationship-first approach we started with.</p>
+        <p class="muted" style="margin-top:14px">We invest in certified scales, ISO-audited processes and trained graders so that what you see is exactly what you&rsquo;re paid for.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION -->
+  <section class="section bg-surface">
+    <div class="wrap">
+      <div class="mv-grid">
+        <article class="card mv reveal">
+          <div class="icon-badge icon-badge--copper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
+          <h3 class="h-md">Our Mission</h3>
+          <p class="muted" style="margin-top:12px">To be Canada&rsquo;s most transparent scrap metal trading partner — grading fairly, paying promptly, and diverting every possible tonne from landfill back into productive use.</p>
+        </article>
+        <article class="card mv reveal" data-d="1">
+          <div class="icon-badge icon-badge--copper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3 class="h-md">Our Vision</h3>
+          <p class="muted" style="margin-top:12px">A circular metals economy where recycled material is the first choice, not the afterthought — and where every supplier is treated as a long-term partner.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal"><span class="eyebrow">Certifications</span><h2 class="h-lg">Accredited and accountable</h2></div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center" class="reveal" data-d="1">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BY THE NUMBERS -->
+  <section class="section bg-ink">
+    <div class="wrap">
+      <div class="section-head center reveal"><span class="eyebrow">By the Numbers</span><h2 class="h-lg" style="color:#fff">Two decades, measured</h2></div>
+      <div class="numbers">
+        <div class="card num-box reveal" style="background:var(--ink-700);border-color:rgba(255,255,255,.08)"><div class="big" style="color:#fff">1998</div><div class="lbl" style="color:var(--on-dark-muted)">Year established</div></div>
+        <div class="card num-box reveal" data-d="1" style="background:var(--ink-700);border-color:rgba(255,255,255,.08)"><div class="big" style="color:#fff"><span data-count="640">0</span><span class="u">k</span></div><div class="lbl" style="color:var(--on-dark-muted)">Tonnes traded</div></div>
+        <div class="card num-box reveal" data-d="2" style="background:var(--ink-700);border-color:rgba(255,255,255,.08)"><div class="big" style="color:#fff"><span data-count="3">0</span></div><div class="lbl" style="color:var(--on-dark-muted)">Facility locations</div></div>
+        <div class="card num-box reveal" data-d="3" style="background:var(--ink-700);border-color:rgba(255,255,255,.08)"><div class="big" style="color:#fff"><span data-count="1200">0</span><span class="u">+</span></div><div class="lbl" style="color:var(--on-dark-muted)">Clients served</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal"><span class="eyebrow">Our People</span><h2 class="h-lg">The team on the scale</h2></div>
+      <div class="team-grid">
+        <article class="card team-card reveal"><img class="ph" data-label="Portrait" src="assets/images/portrait.png" alt="Portrait" style="object-fit: cover;"><div class="body"><h4>Marcus Verde</h4><div class="muted" style="font-size:13.5px">Founder &amp; Managing Director</div></div></article>
+        <article class="card team-card reveal" data-d="1"><img class="ph" data-label="Portrait" src="assets/images/portrait.png" alt="Portrait" style="object-fit: cover;"><div class="body"><h4>Helena Cho</h4><div class="muted" style="font-size:13.5px">Head of Non-Ferrous Trading</div></div></article>
+        <article class="card team-card reveal" data-d="2"><img class="ph" data-label="Portrait" src="assets/images/portrait.png" alt="Portrait" style="object-fit: cover;"><div class="body"><h4>Devon Pratt</h4><div class="muted" style="font-size:13.5px">Ferrous Operations Manager</div></div></article>
+        <article class="card team-card reveal" data-d="3"><img class="ph" data-label="Portrait" src="assets/images/portrait.png" alt="Portrait" style="object-fit: cover;"><div class="body"><h4>Aisha Rahimi</h4><div class="muted" style="font-size:13.5px">Quality &amp; Compliance Lead</div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-bar">
+    <div class="wrap">
+      <a class="cbi" href="tel:+14377996109"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> 437-799-6109 / 226-724-3896</a>
+      <a class="cbi" href="mailto:Info@syncromet.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg> Info@syncromet.com</a>
+      <a class="btn" href="contact.html">Request a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

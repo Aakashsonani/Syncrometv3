@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Syncromet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/modern.css">
+<style>
+.faq-layout { display:grid; grid-template-columns: .9fr 1.6fr; gap: clamp(28px,4vw,56px); align-items:start; }
+@media(max-width:860px){ .faq-layout{ grid-template-columns:1fr; } }
+.faq-aside { position:sticky; top:100px; }
+.faq-cat { margin-bottom:34px; }
+.faq-cat h3 { font-size:1.05rem; color:var(--copper-deep); text-transform:uppercase; letter-spacing:.06em; margin-bottom:14px; font-size:13px; }
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <section class="page-hero" data-screen-label="FAQ — Hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span>FAQ</span></div>
+      <span class="eyebrow">Frequently Asked Questions</span>
+      <h1 class="h-xl text-wrap-pretty" style="max-width:16ch">Answers before you ask</h1>
+      <p class="lead" style="margin-top:18px;max-width:56ch">The questions we hear most from new and returning clients. Can&rsquo;t find what you need? Just give us a call.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap faq-layout">
+      <aside class="faq-aside reveal">
+        <div class="card" style="padding:28px">
+          <h3 class="h-md" style="font-size:1.3rem">Still have questions?</h3>
+          <p class="muted" style="margin-top:10px;font-size:14.5px">Our trading team is happy to walk you through grades, pricing or logistics.</p>
+          <a class="btn" href="contact.html" style="margin-top:18px;width:100%">Contact us</a>
+          <a class="btn btn--ghost" href="tel:+18885557625" style="margin-top:10px;width:100%">Call 1-888-555-7625</a>
+        </div>
+      </aside>
+
+      <div class="reveal" data-d="1">
+        <div class="faq-cat">
+          <h3>Selling &amp; Pricing</h3>
+          <div class="accordion" id="faq">
+            <div class="accordion-item"><button class="accordion-q">How are prices determined?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Prices are indexed to live commodity markets and adjusted for grade, cleanliness and volume. We grade transparently at weigh-in, show you how the payout is calculated, and update our reference rates regularly — synced with iScrap.</div></div></div>
+            <div class="accordion-item"><button class="accordion-q">Do I need to sort my metal before delivering?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Sorting helps you get the best price, but it isn&rsquo;t required. We can grade mixed loads on arrival. If you&rsquo;re unsure how something classifies, bring it in or send a photo and we&rsquo;ll advise.</div></div></div>
+            <div class="accordion-item"><button class="accordion-q">How and when do I get paid?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Once you accept the graded quote, we settle quickly by the method that suits your business — cheque, e-transfer or direct deposit for commercial accounts. Large or recurring volumes can be set up on terms.</div></div></div>
+          </div>
+        </div>
+
+        <div class="faq-cat">
+          <h3>Metals &amp; Grades</h3>
+          <div class="accordion">
+            <div class="accordion-item"><button class="accordion-q">What metals do you accept?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Ferrous: steel, cast iron, HMS 1 &amp; 2, auto bodies, rail, pit scrap and prime bundles. Non-ferrous: copper, aluminum, brass, stainless, lead, zinc, nickel, catalytic converters and specialty alloys.</div></div></div>
+            <div class="accordion-item"><button class="accordion-q">What&rsquo;s the difference between ferrous and non-ferrous?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Ferrous metals contain iron and are magnetic (steel, iron). Non-ferrous metals don&rsquo;t contain iron, resist corrosion and are non-magnetic (copper, aluminum, brass) — they generally carry higher value per pound. A simple magnet test tells them apart.</div></div></div>
+            <div class="accordion-item"><button class="accordion-q">Do you handle catalytic converters?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Yes. Whole units are assayed for their platinum-group metal content and valued individually, with full documentation. Contact us for current converter pricing.</div></div></div>
+          </div>
+        </div>
+
+        <div class="faq-cat">
+          <h3>Logistics &amp; Compliance</h3>
+          <div class="accordion">
+            <div class="accordion-item"><button class="accordion-q">Do you offer pickup, or do I deliver?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Both. Smaller loads are welcome at our Mississauga yard during business hours. For commercial volumes we arrange scheduled pickups across our service area — just include your location in the quote request.</div></div></div>
+            <div class="accordion-item"><button class="accordion-q">Are your scales certified?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Yes — all weigh-ins use government-certified scales, and every transaction is documented under our ISO 9001:2015 quality system. You receive a record of weights and grades.</div></div></div>
+            <div class="accordion-item"><button class="accordion-q">What certifications do you hold?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="accordion-a"><div>Syncromet is ISO 9001:2015 certified and a member of ISRI (the Institute of Scrap Recycling Industries), so our grading and handling follow recognized industry standards.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+  document.querySelectorAll(".accordion-item").forEach(function(item){
+    var q = item.querySelector(".accordion-q");
+    var a = item.querySelector(".accordion-a");
+    q.addEventListener("click", function(){
+      var open = item.classList.contains("open");
+      // close siblings within same .accordion
+      item.parentElement.querySelectorAll(".accordion-item.open").forEach(function(o){
+        if(o!==item){ o.classList.remove("open"); o.querySelector(".accordion-a").style.maxHeight=null; }
+      });
+      if(open){ item.classList.remove("open"); a.style.maxHeight=null; }
+      else { item.classList.add("open"); a.style.maxHeight = a.scrollHeight + "px"; }
+    });
+  });
+})();
+</script>
+</body>
+</html>

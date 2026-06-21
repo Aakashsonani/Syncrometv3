@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferrous Metals — Syncromet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=2">
+<link rel="stylesheet" href="assets/modern.css?v=2">
+<style>
+.metal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+@media(max-width:900px){ .metal-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:560px){ .metal-grid{ grid-template-columns:1fr; } }
+.cta-band { text-align:center; max-width:680px; margin-inline:auto; }
+</style>
+</head>
+<body>
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Syncromet home">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="#d27e4b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4" stroke="#9fb0bd"/></svg></span>
+        <span><span class="brand__name">SYNCRO<b>MET</b></span><span class="brand__sub">Metal Trading &middot; Canada</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html" data-key="home">Home</a></li>
+        <li><a href="about.html" data-key="about">About</a></li>
+        <li><a href="services.html" data-key="services">Services</a></li>
+        <li class="has-sub"><a href="#" data-key="metals" class="active">Metals <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle"><path d="M6 9l6 6 6-6"/></svg></a>
+          <ul class="subnav">
+            <li><a href="ferrous.html" data-key="ferrous" class="active">Ferrous Metals</a></li>
+            <li><a href="non-ferrous.html" data-key="nonferrous">Non-Ferrous Metals</a></li>
+          </ul>
+        </li>
+        <li><a href="safety.html" data-key="safety">Safety &amp; Environment</a></li>
+        <li><a href="blog.html" data-key="blog">Blog</a></li>
+        <li><a href="faq.html" data-key="faq">FAQ</a></li>
+        <li><a href="contact.html" data-key="contact">Contact</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a class="btn btn--sm" href="contact.html">Get a Quote</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </nav>
+  </div>
+</header>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer__scrim" data-close></div>
+  <div class="mobile-drawer__panel">
+    <div class="mobile-drawer__head">
+      <a class="brand" href="index.html"><span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="#d27e4b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4" stroke="#9fb0bd"/></svg></span><span class="brand__name">SYNCRO<b>MET</b></span></a>
+      <button class="mobile-drawer__close" id="drawerClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <a class="mlink" data-key="home" href="index.html">Home</a>
+    <a class="mlink" data-key="about" href="about.html">About</a>
+    <a class="mlink" data-key="services" href="services.html">Services</a>
+    <a class="mlink active" data-key="ferrous" href="ferrous.html">Ferrous Metals</a>
+    <a class="mlink" data-key="nonferrous" href="non-ferrous.html">Non-Ferrous Metals</a>
+    <a class="mlink" data-key="safety" href="safety.html">Safety &amp; Env</a>
+    <a class="mlink" data-key="blog" href="blog.html">Blog</a>
+    <a class="mlink" data-key="faq" href="faq.html">FAQ</a>
+    <a class="mlink" data-key="contact" href="contact.html">Contact</a>
+    <a class="btn" href="contact.html">Get a Quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="btn btn--ghost" href="tel:+14377996109" style="margin-top:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> 437-799-6109 / 226-724-3896</a>
+  </div>
+</div>
+<main>
+  <section class="page-hero" data-screen-label="Ferrous — Hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Metals</a> / <span>Ferrous Metals</span></div>
+      <span class="eyebrow">Ferrous Metals</span>
+      <h1 class="h-xl text-wrap-pretty" style="max-width:18ch">Steel &amp; iron, traded at volume</h1>
+      <p class="lead" style="margin-top:18px;max-width:62ch">Ferrous metals contain iron and are magnetic — the backbone of construction, manufacturing and transport. We move them by the tonne with documented, transparent grading.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal" style="max-width:720px">
+        <span class="eyebrow">What We Accept</span>
+        <h2 class="h-lg text-wrap-pretty">Seven ferrous grades, accurately sorted</h2>
+        <p class="lead" style="margin-top:14px">Each load is graded and weighed on certified scales. If you&rsquo;re unsure how your material classifies, our team will walk you through it.</p>
+      </div>
+      <div class="metal-grid">
+        <article class="card metal-card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v4H3zM5 11v8h14v-8M9 11v8M15 11v8"/></svg></div><h3 style="font-size:1.2rem">Steel Scrap</h3><p class="muted" style="font-size:14.5px">General structural and sheet steel from manufacturing and construction.</p></article>
+        <article class="card metal-card reveal" data-d="1"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="9" rx="1"/><path d="M7 9V6h10v3"/></svg></div><h3 style="font-size:1.2rem">Cast Iron</h3><p class="muted" style="font-size:14.5px">Engine blocks, machine bases, pipe and heavy castings.</p></article>
+        <article class="card metal-card reveal" data-d="2"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 8 6l4 12 4-12 4 12"/></svg></div><h3 style="font-size:1.2rem">HMS 1 &amp; 2</h3><p class="muted" style="font-size:14.5px">Heavy melting steel, sorted by thickness and grade.</p></article>
+        <article class="card metal-card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5h11l3 3h2v4M3 13h16M3 13v3h2"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="16.5" cy="17.5" r="2"/></svg></div><h3 style="font-size:1.2rem">Auto / Vehicle Bodies</h3><p class="muted" style="font-size:14.5px">End-of-life vehicles and stripped automotive hulks.</p></article>
+        <article class="card metal-card reveal" data-d="1"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16M9 4v16M4 8h5M4 12h5M4 16h5M14 4l6 16"/></svg></div><h3 style="font-size:1.2rem">Rail / Track</h3><p class="muted" style="font-size:14.5px">Used rail, track sections and railway steel offcuts.</p></article>
+        <article class="card metal-card reveal" data-d="2"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c2-4 5-6 9-6s7 2 9 6M5 16v3h14v-3"/></svg></div><h3 style="font-size:1.2rem">Pit Scrap</h3><p class="muted" style="font-size:14.5px">Mixed lower-grade ferrous recovered from yards and pits.</p></article>
+        <article class="card metal-card reveal"><div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="1"/><path d="M8 6v12M12 6v12M16 6v12"/></svg></div><h3 style="font-size:1.2rem">Prime Bundles</h3><p class="muted" style="font-size:14.5px">Clean, baled industrial sheet steel — premium ferrous grade.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-ink">
+    <div class="wrap cta-band reveal">
+      <h2 class="h-lg" style="color:#fff">Have ferrous scrap?</h2>
+      <p class="lead" style="margin-top:14px">Send us your metal type and approximate weight — we&rsquo;ll come back with a transparent, market-rate quote.</p>
+      <a class="btn btn--lg" href="contact.html" style="margin-top:26px">Contact us for a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>
