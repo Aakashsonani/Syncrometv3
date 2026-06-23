@@ -52,6 +52,8 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+* { -webkit-tap-highlight-color: transparent; }
+:focus:not(:focus-visible) { outline: none; }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--ink); }
 
