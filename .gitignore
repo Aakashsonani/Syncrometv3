@@ -1,3 +1,7 @@
 .vercel
 assets/env.js
 .playwright-mcp
+terraform/.terraform
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
