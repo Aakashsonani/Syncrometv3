@@ -1,0 +1,38 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ca-central-1
+        run: |
+          aws s3 sync . s3://syncromet-website \
+            --exclude ".git/*" \
+            --exclude "terraform/*" \
+            --exclude "scripts/*" \
+            --exclude "design_bundle/*" \
+            --exclude ".github/*" \
+            --exclude "assets/env.js" \
+            --exclude "*.py" \
+            --exclude "*.md" \
+            --delete
+
+      - name: Invalidate CloudFront
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ca-central-1
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E1LD8CDCEOWA0S \
+            --paths "/*"
