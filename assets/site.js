@@ -143,7 +143,7 @@
       '</div>' +
       '<div class="footer-bottom">' +
         '<span>&copy; ' + new Date().getFullYear() + ' Syncromet Inc. All rights reserved.</span>' +
-        '<span style="display:flex;gap:20px;flex-wrap:wrap"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><span>ISO 9001:2015 · ISRI Member</span></span>' +
+        '<span style="display:flex;gap:20px;flex-wrap:wrap"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></span>' +
       '</div>' +
     '</div></footer>';
   }
